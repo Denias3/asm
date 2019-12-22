@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.15)
 project(asm C)
 
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}  -Wall -Werror -Wextra")
+file(GLOB LIBFT ft_printf/*.c ft_printf/*.h ft_printf/libft/*.c ft_printf/libft/*.h)
 
-add_executable(asm asm.c)
+set(SOURCES asm.c)
+
+add_executable(asm ${SOURCES} ${LIBFT})
+
