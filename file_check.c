@@ -14,5 +14,11 @@
 
 int     file_check(char *name_file)
 {
+	char *format;
 
+	if ((format = ft_strstr(name_file, ".s")) != NULL && !format[2])
+	{
+		return (1);
+	}
+	return (0);
 }
