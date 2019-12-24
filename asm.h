@@ -7,4 +7,6 @@
 
 #include "ft_printf/ft_printf.h"
 
+int     file_check(char *name_file);
+
 #endif //ASM_ASM_H
