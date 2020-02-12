@@ -15,12 +15,17 @@
 
 #include "../ft_printf/ft_printf.h"
 #include "op.h"
+#include <fcntl.h>
 
 typedef	struct		s_inst
 {
 	int 			type;        // 0 - операция    | 1 - .name | 2 - .comment
 	char			*str;        // Вся строка      |    Имя    | Комментарий
-	char 			**mark;      // Метки если есть |    NULL   |    NULL
+	char 			**label;     // Метки если есть |    NULL   |    NULL
+	char 			*inst;
+	char 			*reg;
+	char			*d_label;
+	char 			*dir;
 	struct s_inst	*next;
 	struct s_inst	*prev;
 }					t_inst;

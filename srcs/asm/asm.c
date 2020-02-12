@@ -18,8 +18,12 @@ int main(int argc, char **argv)
 	{
 		if (asm_check(argv[argc - 1]))
 		{
-
+//			тут твой код :* <3
 			ft_printf("OK\n");
+		}
+		else
+		{
+			ft_printf("Error\n");
 		}
 	}
 	else
