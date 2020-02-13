@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   asm.c                                              :+:      :+:    :+:   */
+/*   name_check.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fschille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/12 15:45:09 by fschille          #+#    #+#             */
-/*   Updated: 2020/02/12 15:45:11 by fschille         ###   ########.fr       */
+/*   Created: 2020/02/12 18:50:44 by fschille          #+#    #+#             */
+/*   Updated: 2020/02/12 18:50:46 by fschille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/asm.h"
 
-int main(int argc, char **argv)
+int 	name_check(t_inst *list, char *line)
 {
-	t_inst s_list;
-	if (argc == 2 && file_check(argv[argc - 1]))
-	{
-		if ((s_list = asm_check(argv[argc - 1])) != NULL)
-		{
+	char	*c;
+	char 	*c2;
 
-			ft_printf("OK\n");
-		}
-		else
-		{
-			ft_printf("Error\n");
-		}
-	}
-	else
-	{
-		ft_printf("Error\n");
-	}
-	return 0;
+	list->type = 1;
+
+	line = ft_strstr(line, "\"");
+	c2 = ft_strchr(line + (c - line + 1), '"');
+	list->str = realloc(list->str, sizeof(char) * ((c2 - line + 1) - (c - line + 1) + 1));
+	strcpy(list->str, x)
 }
